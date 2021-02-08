@@ -127,7 +127,36 @@ int gcd(int x, int y) {
     }
 }
 
-char isPalindrome(char[] s) {
+char isPalindrome(char * s) {
     /* determines if str is palindrome recursively */
+    int length = strlen(s);
+    if (length <= 1) {
+       return 1;
+    }
+    else if (length == 2) {
+        return (s[0] == s[1]);
+    }
+    else if (s[0] == s[length-1]) {
+        s[length-1] = '\0';
+        return isPalindrome(s+1);
+    }
+    else {
+        return 0;
+    }
+}
     
+void collatz(int n) {
+    /* determines if str is palindrome recursively */
+    if (n <= 1) {
+        printf("1 ");
+    }
+    else {
+        printf("%d ", n);
+        if ((n % 2) == 0) {
+            collatz(n / 2);
+        }
+        else {
+        collatz ((3 * n) + 1);
+        }
+    }
 }
