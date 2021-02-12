@@ -3,20 +3,19 @@
 /*
 FIX FOR VALUES LESS THAN E
  */
-#define LETTER(grade) (((grade) == (100)) ? (65) : ((65) + ((100) - ((grade) - (grade) % 10)) / (10)))
+#define LETTER(grade) (((grade) < (70)) ? (70) : ((64) + ((100) - ((grade) - (grade) % 10)) / (10)))
 #define MAX_GRADES 10
+#define MAX_CHAR 255
 
-typedef union {
-    int number;
-    char seq[255];
-}id;
-
-typedef struct {
+typedef struct record {
    int year;
-   char name[255];
-   id stud_id;
+   char name[MAX_CHAR];
+   union {
+       int number;
+       char seq[MAX_CHAR];
+   }id;
    int grades[MAX_GRADES];
-   char let_grade;
+   int let_grade;
 }student;
 
 int average(int * x);
