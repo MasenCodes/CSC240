@@ -3,6 +3,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include"printandcombine.h"
+#include"common.h"
+#include"buildlinklist.h"
 
 #define BUFFERLEN 40
 
@@ -58,15 +61,23 @@ void read_objects(node_t ** pointer_to_node_ptr) {
 
 char * term_to_string(term_t * term) {
 /* Your code implementation goes here */
-}
+    char str_monomial[TERM_LEN];
+    
+    str_monomial[0] = term->coefficient;
+    str_monomial[1] = term->var;
+    str_monomial[2] = EXP;
+    str_monomial[3] = term->exponent;
 
+    return str_monomial;
+}
+/*
 void print_linklist(node_t * curr) {
-/* Your code implementation goes here */
+
 }
 
 node_t * combine_like_terms(const node_t * current_node_ptr) {
-/* Your code implementation goes here */
-}
+
+}*/
 
 
 int main() {
@@ -89,20 +100,24 @@ int main() {
     printf("testterm3: %s\n", term_to_string(&testterm3));
     printf("Done testing term.c/h:\n");
     /* Done with testing the term_to_string function */
-
+  
     printf("Original: : ");
     /* Print the link list */
+
+    /* 
     print_linklist(node_ptr);
     
-    /* Combine like terms in the link list and craeate a new link list */
+    * Combine like terms in the link list and craeate a new link list *
     new_node_ptr=combine_like_terms(node_ptr);
     printf("\nCombined: : ");
-    /* Print new combine linklist */
+    * Print new combine linklist *
     print_linklist(new_node_ptr);
 
     printf("\nNAME: SAMPLE OUTPUT\n");
     free(node_ptr);
     free(new_node_ptr);
+    */
+
 
     return 0;
 }
