@@ -1,5 +1,5 @@
 CC=gcc 
-CFLAGS=-std=c11 -Wall -pedantic 
+CFLAGS=-Wall -pedantic  -ansi
 
 all: project1.c buildlinklist.o printandcombine.o
 	$(CC) $(CFLAGS) project1.c buildlinklist.o printandcombine.o -o project1.exe
