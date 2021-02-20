@@ -8,30 +8,29 @@
 
 int main() {
     node_t * node_ptr = NULL;
-    node_t * new_node_ptr=NULL;
+    node_t * new_node_ptr = NULL;
 
     printf("NAME: Masen Lunt\n");
     
     /* Build linklist */
     read_objects(&node_ptr);
 
-    
     /* Print the link list */
     printf("Original: ");
     print_linklist(node_ptr);
-    /*
-    * Combine like terms in the link list and craeate a new link list *
+
+    /* Combine like terms in the link list and craeate a new link list */
     new_node_ptr=combine_like_terms(node_ptr);
-    printf("\nCombined: : ");
-    * Print new combine linklist *
+    printf("\nCombined: ");
+
+    /* Print new combine linklist */
     print_linklist(new_node_ptr);
 
     printf("\nNAME: Masen Lunt\n");
     free(node_ptr);
     free(new_node_ptr);
-    */
-    return 0;
 
+    return 0;
 
 }
 
