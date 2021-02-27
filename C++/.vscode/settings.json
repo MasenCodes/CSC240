@@ -1,0 +1,26 @@
+{"shellLauncher.shells.windows": [
+    {
+      "shell": "C:\\Windows\\System32\\cmd.exe",
+      "label": "cmd"
+    },
+    {
+      "shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "label": "PowerShell"
+    },
+    {
+      "shell": "C:\\cygwin\\bin\\cyg-bash.exe",
+      "args": ["-l"],
+      "env": {"CHERE_INVOKING": "1"},
+      "label": "Cygwin Bash"
+    },
+    {
+      "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "label": "bash"
+    }
+  ],
+  "files.associations": {
+    "string": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
+  },
+}
