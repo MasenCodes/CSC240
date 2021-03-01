@@ -63,6 +63,6 @@ int main() {
     a.print_array();
     b.print_array();
 
-    // desctructor is called here
+    // desctructor(s) is called here
     return 0;
 }
