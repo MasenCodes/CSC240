@@ -17,4 +17,15 @@
       "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
       "label": "bash"
     }
-  ],}
+  ],
+  "files.associations": {
+    "string": "cpp",
+    "filesystem": "cpp",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "cmath": "cpp",
+    "complex": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp"
+  },
+}

@@ -1,4 +1,4 @@
-#ifdef TERM_HPP
+#ifndef TERM_HPP
 #define TERM_HPP
 #include<string>
 
@@ -9,18 +9,20 @@ class Term {
 private:
 
     int coefficient;
-    String variable;
+    string variable;
     int exponent;
 
 public:
 
-    Term(int coef = 0, string var = "x", int exp = 0);
+    Term(int, string, int);
+    Term();
     ~Term();
     string toString();
     int getCoefficient();
-    String getVariable();
+    string getVariable();
     int getExponent();
-
+    void addToCoefficient(int);
+    void setNull();
 };
 
 #endif
