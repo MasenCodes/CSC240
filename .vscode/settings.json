@@ -26,6 +26,7 @@
     "cmath": "cpp",
     "complex": "cpp",
     "bitset": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "vector": "cpp"
   },
 }

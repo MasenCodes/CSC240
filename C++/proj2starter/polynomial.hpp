@@ -1,3 +1,5 @@
+#ifndef POLY_HPP
+#define POLY_HPP
 #include<string>
 #include<vector>
 #include"term.hpp"
@@ -18,5 +20,6 @@ class Polynomial {
         Polynomial combineLikeTerms();
 };
 
+#endif
 
 
