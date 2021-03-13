@@ -12,9 +12,6 @@ class Polynomial {
         vector<Term> terms;
     
     public:
-        Polynomial();
-        ~Polynomial();
-
         void add(Term term);
         void print();
         Polynomial combineLikeTerms();

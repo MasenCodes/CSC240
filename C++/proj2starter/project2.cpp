@@ -30,15 +30,16 @@ void read_objects(std::vector<Term> & term_list) {
     fp = fopen("terms.txt", "r");
 
     while (fgets(buffer, BUFFERLEN,fp)) {
-      Term this_term;
-      this_term =  term_from_string(buffer);
+      //Term this_term;
+      //this_term =  term_from_string(buffer);
+      Term this_term = term_from_string(buffer);
       term_list.push_back(this_term);
     }
     fclose(fp);
 }
 
 int main() {
-   cout << "NAME: SAMPLE OUTPUT" << endl;;
+   cout << "NAME: Masen Lunt" << endl;;
     /*
     //Test your toString() method
     Term testterm1(1, "x", 0);
@@ -68,10 +69,10 @@ int main() {
     cout << endl;
 
     poly2 = poly1.combineLikeTerms();
-    printf("\nCombined: : ");
+    printf("\nCombined: ");
     poly2.print();
     cout << endl << endl;
 
-    cout << "NAME: SAMPLE OUTPUT" << endl;;
+    cout << "NAME: Masen Lunt" << endl;;
     return 0;
 }

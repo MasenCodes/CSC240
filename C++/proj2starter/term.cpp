@@ -4,14 +4,25 @@
 
 using namespace std;
 
-Term::Term(int coef = 0, string var = "x", int exp = 0){
+Term::Term(int coef = 0, string var = "x", int exp = 0) {
     coefficient = coef;
     variable = var;
     exponent = exp;
 }
 
+Term::Term(const Term &original) {
+    coefficient = original.coefficient;
+    variable = original.variable;
+    exponent = original.exponent;
+}
+
 string Term::toString() {
-    return to_string(coefficient) + variable + "^" + to_string(exponent);
+    if(exponent) {
+        return to_string(coefficient) + variable + "^" + to_string(exponent);
+    }
+    else {
+        return to_string(coefficient);
+    }
 }
 
 int Term::getCoefficient() {
@@ -31,7 +42,7 @@ void Term::addToCoefficient(int n) {
 }
 
 void Term::setNull() {
-    exponent = NULL;
+    exponent = 0;
     variable = "";
 }
 

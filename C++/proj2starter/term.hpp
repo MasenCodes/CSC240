@@ -15,8 +15,7 @@ private:
 public:
 
     Term(int, string, int);
-    Term();
-    ~Term();
+    Term(const Term&);
     string toString();
     int getCoefficient();
     string getVariable();
