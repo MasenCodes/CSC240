@@ -1,0 +1,53 @@
+#lang scheme
+
+
+(define remove-next-to-last
+  (lambda (lst)
+    (cond
+      ((null? lst) 'null-list)
+      ((null? (cdr (cdr lst))) (cdr lst))
+      (else (cons (car lst) (remove-next-to-last (cdr lst)))))))
+
+(define slope
+  (lambda (a b)
+    (cond
+      ((or (not (pair? a)) (not (pair? b))) 'invalid-input)
+      (else (/ (- (cdr a) (cdr b)) (- (car a) (car b)))))))
+
+(define in?
+  (lambda (lst ele)
+    (cond
+      ((null? lst) #f)
+      ((equal? (car lst) ele) #t)
+      (else (in? (cdr lst) ele)))))
+
+(define remove-dups
+  (lambda (lst)
+     (cond
+       ((null? lst) '())
+       ((in? (cdr lst) (car lst)) (remove-dups (cdr lst)))
+       (else (cons (car lst) (remove-dups (cdr lst)))))))
+
+(define invert
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      ((list? (car lst)) (append (invert (cdr lst)) (list (invert (car lst)))))
+      (else (append (invert (cdr lst)) (list(car lst)))))))
+
+(define insertion-sort
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      
+
+
+
+                                
+
+
+
+
+
+
+
